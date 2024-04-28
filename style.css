@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+:root {
+    --nutmeg: hsl(14, 45%, 36%);
+    --dark-rasp: hsl(332, 51%, 32%);
+    --white: hsl(0, 0%, 100%);
+    --rose-white: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --light-grey: hsl(30, 18%, 87%);
+    --wenge-brown: hsl(30, 10%, 34%);
+    --dark-charcoal: hsl(24, 5%, 18%);
+    --fnt-young: "Young Serif", serif;
+    --fnt-outfit: "Outfit", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: var(--fnt-outfit);
+    color: var(--wenge-brown);
+}
+
+body {
+    background-color: var(--eggshell);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 700px;
+    background-color: var(--white);
+    border-radius: 1rem;
+    margin: 1.5rem;
+    hr {
+        border: 0.05rem solid var(--light-grey);
+        opacity: 0.5;
+        margin: 1.75rem 0;
+    }
+
+    & > *{
+        padding: 0 1.5rem;
+    }
+
+    .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+
+        img {
+            max-width: 100%;
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    h1 {
+        font-family: var(--fnt-young);
+        font-size: 38px;
+        font-weight: 400;
+        margin-bottom: 1rem;
+        color: var(--dark-charcoal);
+    }
+
+    p {
+        color: var(--wenge-brown);
+    }
+
+    .preparation {
+        background-color: var(--rose-white);
+        margin: 1.5rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        h3 {
+            color: var(--dark-rasp);
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 1rem;
+        }
+
+        ul li::marker {
+            color: var(--dark-rasp);
+            padding-left: 4rem;
+        }
+
+        ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        ul {
+            margin-left: 0.65rem;
+            list-style-position: inside;
+            font-weight: 400;
+            color: var(--wenge-brown);
+        }
+    }
+
+    h2 {
+        font-family: var(--fnt-young);
+        font-size: 28px;
+        font-weight: 400;
+        color: var(--nutmeg);
+    }
+
+    ul li::marker {
+        color: var(--nutmeg);
+    }
+
+    ul li {
+        margin-bottom: 0.75rem;
+    }
+
+    ul {
+        margin: 1rem;
+        list-style-position: inside;
+    }
+
+    ol li::marker, .row .amount{
+        color: var(--nutmeg);
+        font-weight: 700;
+    }
+
+    ol li {
+        margin: 1rem 0;
+    }
+
+    li span {
+        margin-left: 0.75rem;
+    }
+
+    ol {
+        margin: 0.75rem;
+        list-style-position: inside;
+    }
+
+    .nutrition, p {
+        margin-bottom: 1rem;
+    }
+
+    .table .row {
+        display: flex;
+        margin-right: auto;
+        border-bottom: 1px solid var(--light-grey);
+        padding: 0.75rem 2rem;
+
+        &:last-child {
+            border-bottom: 0;
+            padding-bottom: 1.5rem;
+        }
+
+        & > * {
+            width: 100px;
+            margin-right: auto;
+        }
+    }
+
+}
+
+@media screen and (max-width: 540px){
+    h1 {
+        margin-top: 2rem;
+    }
+
+    .container {
+        margin: 0;
+        border-radius: 0;
+        .image {
+            padding: 0;
+            margin: 0;
+            img {
+                border-radius: 0;
+            }
+        }
+    }
+
+}
